@@ -1,7 +1,7 @@
 #!/usr/vin/env python
 
 """
-http://www.pythonchallenge.com/pc/return/good.html
+http://huge:file@www.pythonchallenge.com/pc/return/good.html
 """
 
 from PIL import Image, ImageDraw
