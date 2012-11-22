@@ -7,7 +7,6 @@ http://www.pythonchallenge.com/pc/hex/copper.html
 import requests
 from StringIO import StringIO
 from PIL import Image, ImageDraw
-import pdb
 
 r = requests.get('http://www.pythonchallenge.com/pc/hex/white.gif', auth=('butter','fly'))
 im = Image.open(StringIO(r.content))
@@ -58,6 +57,3 @@ if line:
   d.line(line, fill=255)
 
 out.show()
-
-
-

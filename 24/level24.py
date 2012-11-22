@@ -37,11 +37,11 @@ for num, pos in enumerate(path):
   if num % 2 == 1:
     bytes += chr(r)
 
-#out = Image.new('RGB', im.size, 0)
-#draw = ImageDraw.Draw(out)
-#draw.line(path, fill=(255,255,255))
-#del draw
-#out.show()
+out = Image.new('RGB', im.size, 0)
+draw = ImageDraw.Draw(out)
+draw.line(path, fill=(255,255,255))
+del draw
+out.show()
 
 with open('out','w') as f:
   f.write(bytes)
