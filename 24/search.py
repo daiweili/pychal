@@ -38,13 +38,13 @@ def AStarSearch(start, goal, grid, h=manhattanDistance):
   closed_set = {start:(None, 0)}
   # Nodes to visit; is a priority queue
   open_set = []
-  heappush(open_set, (start, h(start, goal)))
+  heappush(open_set, (h(start, goal), start))
 
   while True:
     if not open_set:
       return
 
-    pos, cost = heappop(open_set)
+    cost, pos = heappop(open_set)
 
     if comparePos(pos, goal):
       positions = []
@@ -61,7 +61,7 @@ def AStarSearch(start, goal, grid, h=manhattanDistance):
 
       if npos not in closed_set or\
           gcost < closed_set[npos][1]:
-        heappush(open_set, (npos, fcost))
+        heappush(open_set, (fcost, npos))
         closed_set[npos] = (pos, gcost)
 
 

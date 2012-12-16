@@ -43,6 +43,6 @@ draw.line(path, fill=(255,255,255))
 del draw
 out.show()
 
-with open('out','w') as f:
+with open('out.zip','w') as f:
   f.write(bytes)
 
